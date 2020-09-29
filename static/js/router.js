@@ -4,17 +4,17 @@ DragonApp.config([
         $routeProvider
 
             .when('/cart', {
-                templateUrl: '/static/partials/cart.html',
+                templateUrl: '/static/js/partials/cart.html',
                 controller: 'cartCtrl',
             })
 
             .when('/payment', {
-                templateUrl: '/static/partials/payment.html',
+                templateUrl: '/static/js/partials/payment.html',
                 controller: 'paymentCtrl',
             })
 
             .otherwise({
-                templateUrl: '/static/partials/main.html',
+                templateUrl: '/static/js/partials/main.html',
                 controller: 'mainCtrl',
             })
 }]);
