@@ -1,0 +1,26 @@
+<div class="content" flex=90>
+	<h1 class="div-header w3-text-theme">Item List</h1>
+	<md-divider></md-divider>
+	<div class="items">
+		<div class="item" ng-repeat="item in itemList" flex=90>
+			<div layout=row>
+				<div flex=30 layout="column">
+					<div class="title w3-text-theme" ng-bind="item.name"></div>
+					<div class="light desc" ng-bind="item.desc"></div>
+				</div>
+				<div flex=40 class="price" layout="row" layout-align="center center">
+					<div>INR <span ng-bind="formatter.format(item.price)"></span></div>
+				</div>
+				<div class="func" flex=30 layout="row" layout-align="end center">
+					<div ng-hide="item.cart" class="add">
+						<md-button class="CartBtn" ng-click="addToCart(item)">Add to Cart</md-button>
+					</div>
+					<div layout="row" class="incdec" ng-show="item.cart">
+						Added to cart
+					</div>
+				</div>	
+			</div>
+			<md-divider></md-divider>
+		</div>
+	</div>
+</div>

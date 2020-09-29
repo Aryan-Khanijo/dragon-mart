@@ -1,0 +1,52 @@
+<div class="content" flex=90>
+	<h1 class="div-header w3-text-theme">Cart</h1>
+	<md-divider></md-divider>
+	<div class="items">
+		<div class="item title-header" flex=90>
+			<div layout=row>
+				<div layout="row" layout-align="start center" flex=30>
+					<div class="w3-text-theme">Item</div>
+				</div>
+				<div class="func" flex=30 layout="row" layout-align="end center">
+					<div layout="row" class="incdec" >
+						<div class="" layout="row">
+							<div class="qty w3-text-theme">Quantity</div>
+						</div>
+					</div>
+				</div>
+				<div flex=20 class="price" layout="row" layout-align="center center">
+					<div class="w3-text-theme">Price</div>
+				</div>
+				<div flex=20 class="price" layout="row" layout-align="center center">
+					<div class="w3-text-theme">Amount</div>
+				</div>
+			</div>
+			<md-divider></md-divider>
+		</div>
+	</div>
+		<div class="item" ng-repeat="item in cartList" flex=90>
+			<div layout=row>
+				<div flex=30 layout="column">
+					<div class="title w3-text-theme" ng-bind="item.name"></div>
+					<div class="light desc" ng-bind="item.desc"></div>
+				</div>
+				<div class="func" flex=30 layout="row" layout-align="end center">
+					<div layout="row" class="incdec" >
+						<div class="CartBtn" layout="row">
+							<md-button class="func" ng-click="dec(item)">-</md-button>
+							<div class="qty" ng-bind="item.qty"></div>
+							<md-button class="func" ng-click="inc(item)">+</md-button>
+						</div>
+					</div>
+				</div>
+				<div flex=20 class="price" layout="row" layout-align="center center">
+					<div>INR <span ng-bind="formatter.format(item.price)"></span></div>
+				</div>
+				<div flex=20 class="price" layout="row" layout-align="center center">
+					<div>INR <span ng-bind="formatter.format(item.amount())"></span></div>
+				</div>
+			</div>
+			<md-divider></md-divider>
+		</div>
+	</div>
+</div>

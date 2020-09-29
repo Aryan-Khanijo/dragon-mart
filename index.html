@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='DragonApp'>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Angular Libraries -->
+		<script src="https://code.angularjs.org/1.8.0/angular.min.js"></script>
+		<script src="https://code.angularjs.org/1.8.0/angular-route.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-aria.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.19/lodash.min.js"></script>
+		<!-- Angular Files -->
+		<script src="./static/js/app.js"></script>
+		<script src="./static/js/router.js"></script>
+		<script src="./static/js/service/cartService.js"></script>
+		<script src="./static/js/controller/mainCtrl.js"></script>
+		<script src="./static/js/controller/cartCtrl.js"></script>
+		<script src="./static/js/controller/paymentCtrl.js"></script>
+		<script src="./static/js/models/itemModel.js"></script>
+		<script src="./static/js/models/underScore.js"></script>
+		<!-- Angular Material style sheet -->
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
+		<!-- My StyleSheet -->
+		<link rel="stylesheet" href="./static/css/blue-grey_theme.css">
+		<link rel="stylesheet" href="./static/css/style.css">
+		<title>Dragon Mart</title>
+	</head>
+	<body ng-clock>
+		<header flex="90" class="mynavbar w3-text-theme">
+			<a href="#/" class="logo"> <span class="devil devil-light">Dragon Mart</a>
+			<div class="menu-toggle"><i id="dropNav" class="material-icons">menu</i></div>
+			<nav id="navBar">
+				<ul id="navList">
+					<li id="home" class="active w3-theme"><a href="#!">Home</a></li>
+					<li id="logout" class="notactive"><a href="#!cart">Cart</a></li>
+				</ul>
+			</nav>
+			<div class="clearfix"></div>
+		</header>
+		<div ng-view></div>
+	</body>
+</html>

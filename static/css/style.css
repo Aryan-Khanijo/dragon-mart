@@ -1,0 +1,119 @@
+html, body{
+    margin: 0;
+    background-image: url('../media/bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-y: hidden;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+a:-webkit-any-link {
+    color: inherit;
+}
+
+.mynavbar{
+    position: relative;
+    margin: 20px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.logo{
+    height: 60px;
+    font-size: 40px;
+    line-height: 60px;
+    padding: 0 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-weight: 700;
+    text-decoration: none;
+    float: left;
+}
+
+nav{
+    float: right;
+}
+
+.clearfix{
+    clear: both;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li{
+    margin: 2px;
+    list-style: none;
+    border-radius: 8px;
+    transition: background-color .3s;
+}
+
+nav ul li a{
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.menu-toggle{
+    display: none;
+}
+
+nav ul li.active:hover{
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+.content{
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: auto;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.div-header{
+    font-size: 2rem;
+    padding: 15px;
+    margin: 0;
+}
+
+.item{
+    margin: auto;
+    padding: 5px;
+}
+
+.title{
+    font-size: 1.5rem;
+}
+
+.CartBtn{
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 6px;
+}
+
+.func{
+    min-width: 45px;
+    margin: 0;
+    padding: 0;
+}
+
+.incdec{
+    min-width: 88px;
+    margin: 6px 8px;
+}
+
+.qty{margin: auto 2px;}
+
+.title-header{font-size: 1.8rem;}
