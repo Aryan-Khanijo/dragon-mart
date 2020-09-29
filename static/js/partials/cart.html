@@ -24,6 +24,7 @@
 			<md-divider></md-divider>
 		</div>
 	</div>
+	<div flex=90 class="item" style="color: rgba(0, 0, 0, 0.5);" ng-hide="Tamount()"><h3>No Items Added in Cart</h3></div>
 		<div class="item" ng-repeat="item in cartList" flex=90>
 			<div layout=row>
 				<div flex=30 layout="column">
@@ -47,6 +48,19 @@
 				</div>
 			</div>
 			<md-divider></md-divider>
+		</div>
+		<div ng-show="Tamount()" flex=90 style="margin: auto;">
+			<div layout="row">
+				<div class="w3-text-theme" flex=20 layout-align="start center" layout="row">
+					<h2>Total Amount :</h2> 
+				</div>
+				<div flex=20 flex-offset=60 layout="row" layout-align="center center">
+					<div>INR <span ng-bind="formatter.format(Tamount())"></span></div>
+				</div>
+			</div>
+			<div layout="row" layout-align="end center">
+				<md-button style="border-radius: 6px;" class="w3-theme"><a href="#!payment">Proceed To Payment</a></md-button>
+			</div>
 		</div>
 	</div>
 </div>

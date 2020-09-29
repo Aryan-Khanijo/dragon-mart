@@ -5,7 +5,9 @@ DragonApp.controller('cartCtrl',[
 		$scope.cartList = [];
 		$scope.formatter = new Intl.NumberFormat('en-US');
 
-		$scope.amount = dragonService.getTotalAmt();
+		$scope.Tamount = function(){
+			return dragonService.getTotalAmt();
+		} 
 		
 		$scope.inc = function (item){
 			dragonService.inc(item.id)
