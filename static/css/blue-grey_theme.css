@@ -14,7 +14,7 @@
 .w3-theme-action {color:#fff !important; background-color:#303e45 !important}
 
 .w3-theme {color:#fff !important; background-color:#607d8b !important}
-.w3-text-theme, .md-input-focused label {color:#607d8b !important}
+.w3-text-theme, .md-input-focused label,  .md-button.md-primary {color:#607d8b !important}
 .w3-border-theme, .md-input-focused .md-input {border-color:#607d8b !important}
 
 .w3-hover-theme:hover {color:#fff !important; background-color:#607d8b !important}
