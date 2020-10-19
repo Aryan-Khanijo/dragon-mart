@@ -1,0 +1,63 @@
+<div class="content" flex=90>
+	<h1 class="div-header w3-text-theme">Shopping List</h1>
+	<md-divider></md-divider>
+	<div class="items">
+		<div class="item title-header" flex=90>
+			<div layout=row>
+				<div layout="row" layout-align="start center" flex=30>
+					<div class="w3-text-theme">Item</div>
+				</div>
+				<div class="func" flex=30 layout="row" layout-align="end center">
+					<div layout="row" class="incdec" >
+						<div class="" layout="row">
+							<div class="qty w3-text-theme">Quantity</div>
+						</div>
+					</div>
+				</div>
+				<div flex=20 class="price" layout="row" layout-align="center center">
+					<div class="w3-text-theme">Price</div>
+				</div>
+				<div flex=20 class="price" layout="row" layout-align="center center">
+					<div class="w3-text-theme">Amount</div>
+				</div>
+			</div>
+			<md-divider></md-divider>
+		</div>
+	</div>
+		<div class="item" ng-repeat="item in finalList" flex=90>
+			<div layout=row>
+				<div flex=30 layout="column">
+					<div class="title w3-text-theme" ng-bind="item.name"></div>
+					<div class="light desc" ng-bind="item.desc"></div>
+				</div>
+				<div class="func" flex=30 layout="row" layout-align="end center">
+					<div layout="row" class="incdec" >
+						<div class="" layout="row">
+							<div class="qty" ng-bind="item.qty"></div>
+						</div>
+					</div>
+				</div>
+				<div flex=20 class="price" layout="row" layout-align="center center">
+					<div>INR <span ng-bind="formatter.format(item.price)"></span></div>
+				</div>
+				<div flex=20 class="price" layout="row" layout-align="center center">
+					<div>INR <span ng-bind="formatter.format(item.amount())"></span></div>
+				</div>
+			</div>
+			<md-divider></md-divider>
+		</div>
+		<div ng-show="Tamount" flex=90 style="margin: auto;">
+			<div layout="row">
+				<div class="w3-text-theme" flex=20 layout-align="start center" layout="row">
+					<h2>Total Amount :</h2> 
+				</div>
+				<div flex=20 flex-offset=60 layout="row" layout-align="center center">
+					<div>INR <span ng-bind="formatter.format(Tamount)"></span></div>
+				</div>
+            </div>
+            <div layout="row" layout-align="end center">
+				<md-button ng-click="showAlert($event)" style="border-radius: 6px;" class="w3-theme">Pay</md-button>
+			</div>
+		</div>
+	</div>
+</div>
